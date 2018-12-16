@@ -1,5 +1,12 @@
 language: node_js
- node_js: node
- cache:
-   directories:
-     - node_modules
+node_js: node
+cache: 
+directories:
+- node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: gKnDmRs3py1L7TgWdBmdp3W4au4GmTbU7fUcFUsryu3ZqBUaIiXblJSxiDnBdiin9VSXBdVrdbUrWRvW3HIVv6LwjRGeG+TYgfUOQkbUk3j3ysG7s4j1T+GtklPo6yvL36Fg4J+wOy/J2/pqf0xyLdIu8p9NL9P2qQDRycHOXN0UQSsJd26IEVj+n/YkG1DRWvNEg5a154Ifon81TutRsBvr0BzqYalHltDdNJyXpReFr0GlmKEBF/eA2ZqTzi91KTG1v4cYG5ymfuNay2kS4AZ0wkOzqXfHBUnM0JpyajBqROF7MHu3tRX2+LrG07SsSbcvecokCBt2AosZl8T8+BXs7x0VzuYz5dOC1OlpKOHr7pWNkClOry0bJD567It2FdGWs1lOdTojmDybwH2Zv39Qr+WAAaaNPCHLOXQJllvWuYlDXTHWqCxh2ladpWd5PzVlstT3Q0iF1INh6QGMp8jMDt/arzOkEJdEzdYr6PSlZvAL4WwLVkROhHgms9uyJH5RkwMrBT2So1DK5Lq+/esZhi3zmuxBqZ1Y3AOwvh4A7kRx/uK7fbpaw0SUVrrs+Yp3E8XvtnS8Q68isDYf4irFTkbpwrphb2ciArO1mcHUQsew/Ur3+Cf8VscTNSiymufuEcC4zhyu/X0ADHZ5A5U7QnggxAsi2VN4QqNuBBA=
+  app: boiling-badlands-17223
+  on:
+    repo: cymruhangu/caprese-app
