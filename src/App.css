@@ -30,3 +30,9 @@
     transform: rotate(360deg);
   }
 }
+
+body, html, #root, #splash {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
