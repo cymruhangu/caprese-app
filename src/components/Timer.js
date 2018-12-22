@@ -45,7 +45,7 @@ export default class Timer extends React.Component {
       <button onClick={this.startTimer}>resume</button> : null;
     return(
       <div>
-        <h3>timer: {ms(this.state.time)}</h3>
+        <h3>timer: {ms(this.state.time, {verbose:true})}</h3>
         {start}
         {resume}
         {stop}
