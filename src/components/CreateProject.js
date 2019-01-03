@@ -1,25 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addProject } from  '../actions/projects';
+import ProjectForm from './ProjectForm';
 
-export default class CreateProject extends React.Component {
-    render(){
-        return (
-            <div>
-                <h2>Create a New Project</h2>
-                <form className="create-form">
-                    <label for="project-name"> Project Name:</label>
-                    <input type="text" placeholder="project name" id="project-name" />
-                    <label for="project-description"> Description:</label>
-                    <input type="textarea" placeholder="project description" id="project-description" />
-                    <label for="budget"> Time Budget(hours):</label>
-                    <input type="number" id="budget" />
-                    <label for="used">Time Used:</label>
-                    <input type="number" id="used" />
-                    <label for="remaining">Time Remaining:</label>
-                    <input type="number"  id="remaining" />
-                    <button><Link exact to='./dashboard'>Submit</Link></button>
-                </form>
-            </div>
-        )
-    };
-} 
+const CreateProject = (props) => (
+    <div>
+        <h2>Create a New Project</h2>
+        <ProjectForm  
+            onSubmit={(project) => {
+                props.dispatch(addProject(project));
+                props.history.push('/');
+            }}
+        />
+    </div>
+
+);
+
+export default connect()(CreateProject);

@@ -8,6 +8,7 @@ import SplashPage from '../components/SplashPage';
 import NotFoundPage from '../components/NotFoundPage';
 import CloneProject from '../components/CloneProject';
 import CreateProject from '../components/CreateProject';
+import ProjectEdit from '../components/ProjectEdit';
 import HelpPage from '../components/HelpPage';
 import Header from '../components/Header';
 
@@ -16,17 +17,17 @@ const AppRouter = () => (
         <div id="App">
             <Header />
             <Switch>
-                <Route exact strict path="/" component={SplashPage}  />
-                <Route exact strict path="/dashboard" component={Dashboard}  />
-                <Route exact strict path="/login" component={Login}  />
-                <Route exact strict path="/register" component={Register}  />
-                <Route exact strict path="/project/:id" component={Register}  />
-                <Route exact strict path="/projectcreate" component={CreateProject}  />
-                <Route exact strict path="/projectclone" component={CloneProject}  />
-                <Route exact strict path="/task/:id" component={Register}/>
-                <Route exact strict path="/newtask" component={Register}  />
-                <Route exact strict path="/help" component={HelpPage} />
+                <Route  exact={true} path="/" component={Dashboard}  />
+                <Route  path="/login" component={Login}  />
+                <Route  path="/register" component={Register}  />
+                <Route  path="/project/:id" component={ProjectEdit}  />
+                <Route  path="/projectcreate" component={CreateProject}  />
+                <Route  path="/projectclone" component={CloneProject}  />
+                <Route  path="/task/:id" component={Register}/>
+                <Route  path="/newtask" component={Register}  />
+                <Route  path="/help" component={HelpPage} />
                 <Route component={NotFoundPage} />
+                <Route  exact path="/splash" component={SplashPage}/>
             </Switch>
         </div>
     </BrowserRouter>

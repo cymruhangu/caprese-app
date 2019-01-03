@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import SplashPage from './SplashPage';
+import Dashboard from './Dashboard';
 
 
 class App extends Component {
   render() {
     return (
-      <SplashPage />
+      <Dashboard />
     );
   }
 }

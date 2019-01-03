@@ -8,8 +8,8 @@ export default class SplashPage extends React.Component {
             <div className="splash">
                 <h1>The Caprese App</h1>
                 <h2>More than just a tomato timer.</h2>
-                <button><Link exact to="/login">Login</Link></button>
-                <button><Link exact to="/register" >Register</Link></button>
+                <button><Link to="/login">Login</Link></button>
+                <button><Link to="/register" >Register</Link></button>
             </div>
         );
     }   
