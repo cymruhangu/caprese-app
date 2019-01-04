@@ -8,7 +8,7 @@ import SplashPage from '../components/SplashPage';
 import NotFoundPage from '../components/NotFoundPage';
 import CloneProject from '../components/CloneProject';
 import CreateProject from '../components/CreateProject';
-import ProjectEdit from '../components/ProjectEdit';
+import ProjectView from '../components/ProjectView';
 import HelpPage from '../components/HelpPage';
 import Header from '../components/Header';
 
@@ -20,7 +20,7 @@ const AppRouter = () => (
                 <Route  exact={true} path="/" component={Dashboard}  />
                 <Route  path="/login" component={Login}  />
                 <Route  path="/register" component={Register}  />
-                <Route  path="/project/:id" component={ProjectEdit}  />
+                <Route  path="/project/:id" component={ProjectView}  />
                 <Route  path="/projectcreate" component={CreateProject}  />
                 <Route  path="/projectclone" component={CloneProject}  />
                 <Route  path="/task/:id" component={Register}/>

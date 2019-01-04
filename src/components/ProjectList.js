@@ -23,8 +23,3 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(ProjectList);
 
-// <div className="project-create">
-        //     <h2>Create a new project:</h2>
-        //     <button><Link exact to='./projectcreate'>Create New Project</Link></button>
-        //     <button><Link exact to='./projectclone'>Clone Project</Link></button>
-        // </div> 

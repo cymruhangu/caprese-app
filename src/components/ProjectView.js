@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Timer from '../components/Timer';
+import Timer from './Timer';
+import { removeProject } from '../actions/projects';
 import prettyMs from 'pretty-ms';
 
-const ProjectEdit = (props) => {
+const ProjectView = (props) => {
     // console.log(props);
     const id = props.project.id;
     return (
@@ -15,7 +16,12 @@ const ProjectEdit = (props) => {
             <p>{props.project.owner}</p>
             <h3>Project Budget: {prettyMs(props.project.budget)}</h3>
             <h3>Remaining Budget: {prettyMs(props.project.remaining)}</h3>
-            
+            <button onClick={(e) => {
+                e.preventDefault();
+                props.dispatch(removeProject({id}));
+                props.history.push('/');
+            }}>Delete Project</button>
+
             <Timer id={id}/>
         </div>
 
@@ -28,4 +34,4 @@ const mapStateToProps = (state, props) => {
         project: state.projects.find((project) => project.id === props.match.params.id)
     };
 };
-export default connect(mapStateToProps)(ProjectEdit);
+export default connect(mapStateToProps)(ProjectView);
