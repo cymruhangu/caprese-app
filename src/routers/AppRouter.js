@@ -8,6 +8,7 @@ import SplashPage from '../components/SplashPage';
 import NotFoundPage from '../components/NotFoundPage';
 import CloneProject from '../components/CloneProject';
 import CreateProject from '../components/CreateProject';
+import EditProject from '../components/EditProject';
 import ProjectView from '../components/ProjectView';
 import HelpPage from '../components/HelpPage';
 import Header from '../components/Header';
@@ -21,8 +22,9 @@ const AppRouter = () => (
                 <Route  path="/login" component={Login}  />
                 <Route  path="/register" component={Register}  />
                 <Route  path="/project/:id" component={ProjectView}  />
+                <Route  path="/edit/:id" component={EditProject}  />
                 <Route  path="/projectcreate" component={CreateProject}  />
-                <Route  path="/projectclone" component={CloneProject}  />
+                <Route  path="/clone" component={CloneProject}  />
                 <Route  path="/task/:id" component={Register}/>
                 <Route  path="/newtask" component={Register}  />
                 <Route  path="/help" component={HelpPage} />

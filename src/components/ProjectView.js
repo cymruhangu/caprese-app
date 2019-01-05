@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Timer from './Timer';
+// import { Link } from 'react-router-dom';
 import { removeProject } from '../actions/projects';
+import Timer from './Timer';
 import prettyMs from 'pretty-ms';
 
 const ProjectView = (props) => {
@@ -16,11 +17,12 @@ const ProjectView = (props) => {
             <p>{props.project.owner}</p>
             <h3>Project Budget: {prettyMs(props.project.budget)}</h3>
             <h3>Remaining Budget: {prettyMs(props.project.remaining)}</h3>
+        
             <button onClick={(e) => {
                 e.preventDefault();
                 props.dispatch(removeProject({id}));
-                props.history.push('/');
-            }}>Delete Project</button>
+                props.history.push('/'); 
+            }}>Remove</button>
 
             <Timer id={id}/>
         </div>
